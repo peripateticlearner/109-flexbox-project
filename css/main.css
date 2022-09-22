@@ -95,54 +95,72 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
+    background-color: #6f4436;
+    height: 100%;
+    width: 100%;
 }
 
+
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 0 2em;
-  font-size: 1.25em;
-  height: 100%;
-  color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.25em;
+    color: #dfccaf;
+    padding: 0em 2em;
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container {
+    /*add display:flex and set justify-content to space-between*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+p span {
+    font-family: 'Lora', sans-serif;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+header h1 {
+    font-family: 'Lora', sans-serif;
+    font-size: 3em;
 }
 
 main {
-  background-color: #ccc;
-  height: 250px;
-  width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #fff;
 }
 
-header,
-footer,
-main {
-
-}
-
-.flex-container {
-display: flex;
-justify-content: center;
-align-items: center;
-flex-flow: row wrap;
-justify-content: space-between;
+main p {
+    font-size: 1.35em;
 }
 
 .flex-items {
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  width: 30%;
-  height: 200px;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    color: #dfccaf;
+    line-height: 1.5em;
+    font-size: 1em;
 }
+
+footer {
+    border-top: 2px solid #fff;
+  }
+  
+  footer i {
+    padding: 30px 20px 0 0;
 
 /* ==========================================================================
    Helper classes
@@ -225,14 +243,24 @@ justify-content: space-between;
    ========================================================================== */
 
 /* If you'd like to try a different layout on Desktop and larger screens: */
-@media (min-width: 1200px) {
-  #div-1,
-  #div-2{
-      /* set your flex value to 1 50% */
-  }
 
-  #div-3 {
-    /* set your flex value to 1 100% */
+@media all and (max-width: 768px) {
+    body{
+        padding: 1em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .flex-items {
+        flex-basis: 30%;
+        border-bottom: none;
+    }
+
+    #div-2 p {
+        border-left: 1px solid #555;
+        border-right: 1px solid #555;
+        padding: 0 40px;
+      }
   }
 }
 
