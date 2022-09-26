@@ -157,11 +157,18 @@ main p {
 
 footer {
     border-top: 2px solid #fff;
-  }
-  
-  footer i {
-    padding: 30px 20px 0 0;
+    padding: 30px 0 50px 0;
+}
 
+.social-icon {
+   transition: color 0.2s;
+   text-decoration: none;
+   margin: 0 10px;
+}
+
+.social-icon:hover {
+    color: #2c1b15;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -262,7 +269,6 @@ footer {
         padding: 0 40px;
       }
   }
-}
 
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
